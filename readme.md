@@ -1,6 +1,8 @@
 
 # uwl: micro web library for python
 
+library for binding methods/functions to http paths or path regexes
+
 ### quickstart:
 
 - clone repo to your project
