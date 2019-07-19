@@ -53,18 +53,18 @@ def find(routes, http):
 
 def handle(env, **kwargs):
 	return find(__routes, {
-		"uri": env["REQUEST_URI"],
-		"path": env["PATH_INFO"],
-		"query": env["QUERY_STRING"],
-		"scheme": env["REQUEST_SCHEME"],
-		"method": env["REQUEST_METHOD"],
+		"uri":    (env["REQUEST_URI"]),
+		"path":   (env["PATH_INFO"]),
+		"query":  (env["QUERY_STRING"]),
+		"scheme": (env["REQUEST_SCHEME"]),
+		"method": (env["REQUEST_METHOD"]),
 		"remote": (env["REMOTE_ADDR"], env["REMOTE_PORT"]),
 		"server": (env["SERVER_NAME"], env["SERVER_PORT"]),
-		"length": env["CONTENT_LENGTH"],
-		"type": env["CONTENT_TYPE"],
-		"root": env["DOCUMENT_ROOT"],
-		"host": env["HTTP_HOST"],
-		"agent": env["HTTP_USER_AGENT"],
+		"length": (env["CONTENT_LENGTH"]),
+		"type":   (env["CONTENT_TYPE"]),
+		"root":   (env["DOCUMENT_ROOT"]),
+		"host":   (env["HTTP_HOST"]),
+		"agent":  (env["HTTP_USER_AGENT"]),
 		"body": (
 			env["wsgi.input"].read(int(env["CONTENT_LENGTH"]))
 			if env["CONTENT_LENGTH"] else None
