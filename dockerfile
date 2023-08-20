@@ -1,4 +1,4 @@
-#!/usr/bin/env docker build --compress -t pvtmert/uwl -f
+#!/usr/bin/env -S docker build --compress -t pvtmert/uwl -f
 
 FROM debian
 
